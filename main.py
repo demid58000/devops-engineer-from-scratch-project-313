@@ -10,6 +10,9 @@ app = Flask(__name__)
 
 
 @app.get("/ping")
+@app.get("/sentry-test")
+def sentry_test():
+    1 / 0
 def ping():
     return "pong"
 
