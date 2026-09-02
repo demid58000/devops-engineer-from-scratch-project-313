@@ -10,11 +10,13 @@ app = Flask(__name__)
 
 
 @app.get("/ping")
+def ping():
+    return "pong"
+
+
 @app.get("/sentry-test")
 def sentry_test():
     1 / 0
-def ping():
-    return "pong"
 
 
 if __name__ == "__main__":
